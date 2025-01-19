@@ -4,6 +4,16 @@
   flex-direction: column;
   width: 100%;
 
+  &:hover {
+    .governing-card__icon {
+      background-color: $color-white;
+    }
+
+    .governing-card__icon svg {
+      filter: invert(1);
+    }
+  }
+
   &__pictures {
     height: 580px;
     position: relative;

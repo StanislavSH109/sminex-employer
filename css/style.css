@@ -805,6 +805,12 @@ a {
   flex-direction: column;
   width: 100%;
 }
+.governing-card:hover .governing-card__icon {
+  background-color: #ffffff;
+}
+.governing-card:hover .governing-card__icon svg {
+  filter: invert(1);
+}
 .governing-card__pictures {
   height: 580px;
   position: relative;
