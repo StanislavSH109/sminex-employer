@@ -60,6 +60,34 @@
         opacity: 0;
       }
     }
+
+    &:focus {
+      outline: none;
+
+      .hero__button-icon {
+        &::after {
+          content: "";
+          position: absolute;
+          background-color: black;
+          border-radius: 50%;
+          width: 64px;
+          height: 64px;
+          top: 0;
+          left: -10px;
+          z-index: -10;
+        }
+      }
+
+      .hero__button-arrow {
+        left: 7px;
+        filter: invert(1);
+        z-index: 2;
+      }
+      
+      .hero__button-subtrack {
+        opacity: 0;
+      }
+    }
   }
 
   &__button-icon {
@@ -74,16 +102,6 @@
     position: relative;
     height: 64px;
     width: 53px;
-    // &::after {
-    //   content: "";
-    //   position: absolute;
-    //   background-color: black;
-    //   border-radius: 50%;
-    //   width: 64px;
-    //   height: 64px;
-    //   top: 0;
-    //   left: 0;
-    // }
   }
 
   &__button-arrow {
