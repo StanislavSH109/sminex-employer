@@ -580,23 +580,51 @@ a {
   letter-spacing: 0.02em;
   padding: 13px 0;
 }
-.hero__button:hover .hero__button-icon::after {
+.hero__button .hero__button-icon {
+  position: relative;
+}
+.hero__button .hero__button-icon::after {
   content: "";
   position: absolute;
   background-color: black;
   border-radius: 50%;
   width: 64px;
   height: 64px;
-  top: 0;
   left: -10px;
   z-index: -10;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: scale(0);
+  opacity: 0;
+}
+.hero__button .hero__button-arrow {
+  transition: left 0.3s ease, filter 0.3s ease;
+}
+.hero__button .hero__button-subtrack {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.hero__button:hover .hero__button-icon::after {
+  transform: scale(1);
+  opacity: 1;
 }
 .hero__button:hover .hero__button-arrow {
-  left: 7px;
+  left: 10px;
   filter: invert(1);
   z-index: 2;
 }
 .hero__button:hover .hero__button-subtrack {
+  opacity: 0;
+}
+.hero__button:focus .hero__button-icon::after {
+  transform: scale(1);
+  opacity: 1;
+}
+.hero__button:focus .hero__button-arrow {
+  left: 10px;
+  filter: invert(1);
+  z-index: 2;
+}
+.hero__button:focus .hero__button-subtrack {
   opacity: 0;
 }
 .hero__button:focus {
@@ -661,6 +689,10 @@ a {
 }
 .hero__link:hover {
   color: #A7A8AA;
+}
+.hero__link:focus {
+  color: #A7A8AA;
+  outline: none;
 }
 
 .main-video {

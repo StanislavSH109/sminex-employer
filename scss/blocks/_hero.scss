@@ -36,26 +36,65 @@
     letter-spacing: 0.02em;
     padding: 13px 0;
 
+    .hero__button-icon {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: black;
+        border-radius: 50%;
+        width: 64px;
+        height: 64px;
+        left: -10px;
+        z-index: -10;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        transform: scale(0);
+        opacity: 0;
+      }
+    }
+  
+    .hero__button-arrow {
+      transition: left 0.3s ease, filter 0.3s ease;
+    }
+  
+    .hero__button-subtrack {
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+  
     &:hover {
       .hero__button-icon {
         &::after {
-          content: "";
-          position: absolute;
-          background-color: black;
-          border-radius: 50%;
-          width: 64px;
-          height: 64px;
-          top: 0;
-          left: -10px;
-          z-index: -10;
+          transform: scale(1); 
+          opacity: 1;
         }
       }
+  
       .hero__button-arrow {
-        left: 7px;
+        left: 10px;
         filter: invert(1);
         z-index: 2;
       }
-      
+  
+      .hero__button-subtrack {
+        opacity: 0;
+      }
+    }
+
+    &:focus {
+      .hero__button-icon {
+        &::after {
+          transform: scale(1); 
+          opacity: 1;
+        }
+      }
+  
+      .hero__button-arrow {
+        left: 10px;
+        filter: invert(1);
+        z-index: 2;
+      }
+  
       .hero__button-subtrack {
         opacity: 0;
       }
@@ -137,6 +176,11 @@
 
     &:hover {
       color: $color-mischka;
+    }
+
+    &:focus {
+      color: $color-mischka;
+      outline: none;
     }
   }
 }
