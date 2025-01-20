@@ -16,6 +16,10 @@
     gap: 20px;
     padding: 0 0 80px;
     border-bottom: 1px solid $color-iron;
+    
+    @include vp-1023 {
+      flex-direction: column;
+    }
   }
 
   &__inner {
@@ -30,12 +34,22 @@
     font-weight: 200;
     margin: 0;
     text-transform: uppercase;
+
+    @include vp-1023 {
+      font-size: 36px;
+      line-height: 40px;
+    }
   }
 
   &__text {
     font-size: 18px;
     line-height: 26px;
     margin: 40px 0 0 0;
+
+    @include vp-1023 {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 
   &__sublist {
@@ -44,6 +58,11 @@
     list-style: none;
     padding: 0;
     counter-reset: subitem;
+
+    @include vp-1023 {
+      columns: 3;
+      column-gap: 120px;
+    }
   }
 
   &__subitem {
@@ -52,6 +71,12 @@
     padding: 0 0 0 27px;
     font-size: 18px;
     line-height: 26px;
+    
+    @include vp-1023 {
+      font-size: 14px;
+      line-height: 20px;
+      width: 229px;
+    }
 
     &::before {
       content: counter(subitem)".";
@@ -61,6 +86,10 @@
 
     &:not(:last-child) {
       margin: 0 0 15px;
+
+      @include vp-1023 {
+        margin: 0 0 20px;
+      }
     }
   }
 }
