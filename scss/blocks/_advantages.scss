@@ -1,6 +1,10 @@
 .advantages {
   margin: 0 0 80px;
 
+  @include vp-767 {
+    margin: 0 0 40px;
+  }
+
   &__list {
     display: flex;
     flex-direction: column;
@@ -8,6 +12,14 @@
     margin: 0;
     list-style: none;
     gap: 80px;
+
+    @include vp-1023 {
+      gap: 50px;
+    }
+
+    @include vp-767 {
+      gap: 40px;
+    }
   }
 
   &__item {
@@ -19,12 +31,23 @@
     
     @include vp-1023 {
       flex-direction: column;
+      gap: unset;
+      padding: 0 0 50px;
+    }
+
+    @include vp-767 {
+      gap: 10px;
+      padding: 0 0 40px;
     }
   }
 
   &__inner {
     max-width: 500px;
     flex-shrink: 0;
+
+    @include vp-1023 {
+      max-width: unset;
+    }
   }
 
   &__title {
@@ -38,6 +61,12 @@
     @include vp-1023 {
       font-size: 36px;
       line-height: 40px;
+      margin: 0 0 30px;
+    }
+
+    @include vp-767 {
+      font-size: 26px;
+      line-height: 30px;
     }
   }
 
@@ -49,6 +78,11 @@
     @include vp-1023 {
       font-size: 14px;
       line-height: 20px;
+      margin: -15px 0 29px;
+    }
+
+    @include vp-767 {
+      margin: 15px 0 0;
     }
   }
 
@@ -61,7 +95,11 @@
 
     @include vp-1023 {
       columns: 3;
-      column-gap: 120px;
+      column-gap: 145px;
+    }
+
+    @include vp-767 {
+      columns: unset;
     }
   }
 
@@ -76,6 +114,7 @@
       font-size: 14px;
       line-height: 20px;
       width: 229px;
+      padding: 0 0 0 21px;
     }
 
     &::before {
@@ -89,6 +128,10 @@
 
       @include vp-1023 {
         margin: 0 0 20px;
+      }
+
+      @include vp-767 {
+        margin: 0 0 5px;
       }
     }
   }

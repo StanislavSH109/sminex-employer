@@ -14,6 +14,12 @@
       line-height: 40px;
       margin: 0 0 50px;
     }
+
+    @include vp-767 {
+      font-size: 26px;
+      line-height: 30px;
+      margin: 0 0 40px;
+    }
   }
 
   &__list {
@@ -27,10 +33,22 @@
     @include vp-1023 {
       gap: 30px 16px;
     }
+
+    @include vp-767 {
+      grid-template-columns: repeat(2, 1fr);
+      margin: 0 0 60px;
+    }
   }
 
   &__item {
     display: flex;
+
+    &--flat {
+      @include vp-767 {
+        grid-column: span 2;
+        grid-row: 5;
+      }
+    }
   }
 
   &__text-card {
@@ -38,6 +56,11 @@
     padding: 40px;
     border-radius: 20px;
     height: 580px;
+
+    @include vp-767 {
+      height: 280px;
+      padding: 20px;
+    }
   }
 
   &__text-title {
