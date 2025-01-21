@@ -562,7 +562,7 @@ a {
 }
 @media (max-width: 767px) {
   .hero {
-    padding: 40px 0 0;
+    padding: 42px 0 0;
     margin: 0 0 40px;
   }
 }
@@ -603,6 +603,7 @@ a {
   .hero__title {
     font-size: 32px;
     line-height: 36px;
+    margin: 0 0 10px;
   }
 }
 .hero__description {
@@ -633,6 +634,11 @@ a {
     line-height: 20px;
     gap: 4px;
     padding: 5px 0 0;
+  }
+}
+@media (max-width: 767px) {
+  .hero__button {
+    padding: unset;
   }
 }
 .hero__button .hero__button-icon {
@@ -827,6 +833,12 @@ a {
   line-height: 24px;
   color: #ffffff;
 }
+@media (max-width: 767px) {
+  .main-video__play-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
 .main-video__video {
   width: 100%;
   height: 780px;
@@ -836,6 +848,11 @@ a {
 @media (max-width: 1023px) {
   .main-video__video {
     height: 360px;
+  }
+}
+@media (max-width: 767px) {
+  .main-video__video {
+    height: 260px;
   }
 }
 
@@ -918,6 +935,7 @@ a {
   .advantages__title {
     font-size: 26px;
     line-height: 30px;
+    margin: 0 0 5px;
   }
 }
 .advantages__text {
@@ -934,7 +952,7 @@ a {
 }
 @media (max-width: 767px) {
   .advantages__text {
-    margin: 15px 0 0;
+    margin: 15px 0 4px;
   }
 }
 .advantages__sublist {
@@ -971,6 +989,11 @@ a {
     line-height: 20px;
     width: 229px;
     padding: 0 0 0 21px;
+  }
+}
+@media (max-width: 767px) {
+  .advantages__subitem {
+    width: 335px;
   }
 }
 .advantages__subitem::before {
@@ -1038,6 +1061,12 @@ a {
 }
 @media (max-width: 767px) {
   .governing__list {
+    gap: 30px 15px;
+    margin: 0 0 64px;
+  }
+}
+@media (max-width: 767px) {
+  .governing__list {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -1068,6 +1097,15 @@ a {
     padding: 20px;
   }
 }
+@media (max-width: 767px) {
+  .governing__text-inner {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #CBCCCC;
+  }
+}
 .governing__text-title {
   font-size: 110px;
   line-height: 100px;
@@ -1079,6 +1117,11 @@ a {
   .governing__text-title {
     font-size: 70px;
     line-height: 60px;
+  }
+}
+@media (max-width: 767px) {
+  .governing__text-title {
+    margin: 0 0 25px;
   }
 }
 .governing__text-achievement {
@@ -1094,6 +1137,14 @@ a {
     line-height: 16px;
   }
 }
+@media (max-width: 767px) {
+  .governing__text-achievement {
+    font-size: 16px;
+    line-height: 20px;
+    border-bottom: unset;
+    margin: 0 0 1px;
+  }
+}
 .governing__text-description {
   font-size: 18px;
   line-height: 26px;
@@ -1103,6 +1154,13 @@ a {
   .governing__text-description {
     font-size: 12px;
     line-height: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .governing__text-description {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 15px 0 0;
   }
 }
 .governing__slogan {
@@ -1116,6 +1174,11 @@ a {
     font-size: 14px;
     line-height: 20px;
     width: 440px;
+  }
+}
+@media (max-width: 767px) {
+  .governing__slogan {
+    width: 335px;
   }
 }
 
@@ -1177,10 +1240,24 @@ a {
     bottom: 15px;
   }
 }
+@media (max-width: 767px) {
+  .governing-card__icon {
+    width: 40px;
+    height: 40px;
+    right: 10px;
+    bottom: 10px;
+  }
+}
 @media (max-width: 1023px) {
   .governing-card__icon svg {
     width: 18px;
     height: 18px;
+  }
+}
+@media (max-width: 767px) {
+  .governing-card__icon svg {
+    width: 15px;
+    height: 15px;
   }
 }
 .governing-card__name {
@@ -1233,6 +1310,11 @@ a {
     padding: 50px 0;
   }
 }
+@media (max-width: 767px) {
+  .outro {
+    padding: 28px 0;
+  }
+}
 .outro::after {
   content: "";
   position: absolute;
@@ -1259,6 +1341,11 @@ a {
   .outro__note {
     font-size: 12px;
     margin: 0 0 15px;
+  }
+}
+@media (max-width: 767px) {
+  .outro__note {
+    margin: 0 0 10px;
   }
 }
 .outro__link {
@@ -1289,6 +1376,7 @@ a {
   .outro__link-title {
     font-size: 26px;
     line-height: 30px;
+    max-width: 200px;
   }
 }
 .outro__link-icon {
@@ -1353,6 +1441,11 @@ a {
 @media (max-width: 1023px) {
   .footer {
     padding: 40px 0;
+  }
+}
+@media (max-width: 767px) {
+  .footer {
+    padding: 38px 0;
   }
 }
 .footer .container {
